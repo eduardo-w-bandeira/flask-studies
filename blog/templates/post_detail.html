@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>{{post.title}}</h2>
+    <p>{{post.content}}</p>
+    <br/>
+    <p><a href="{{url_for('edit_post', id=post.id)}}">Edit Post</a></p>
+    <p><a href="{{url_for('delete_post', id=post.id)}}"><spam style="font-weight: bold;">*Delete*</spam> Post</a></p>
+{% endblock %}
