@@ -54,7 +54,7 @@ def edit_post(id):
         return render_template("edit_post.html", post=post)
     post["title"] = request.form["title"]
     post["content"] = request.form["content"]
-    return redirect(url_for("home"))
+    return redirect(url_for("post_detail", id=id))
 
 
 @app.route("/delete/<int:id>")
